@@ -17,4 +17,19 @@ class LinkedListNode():
 
 def reverse(head_of_list):
     # Your code here
-    pass
+    current_node = head_of_list
+
+# default values to head's (variables) pointers
+    prev = None
+    next = None
+# 5-> 7-> 9-> (next)None
+# flipping  pointers
+# None <-(prev) 5 <- 7 <-9 (next) <- None
+
+    while current_node:
+        next = current_node.next
+        prev = current_node.next
+
+        prev = current_node
+        current_node = next
+    return prev
